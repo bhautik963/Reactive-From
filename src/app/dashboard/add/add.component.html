@@ -1,0 +1,109 @@
+<div class="container">
+    <app-card cardTitle="Add Data" [options]="false">
+        <form [formGroup]="addForm">
+            <div class="form-group row">
+                <label for="fname" class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                    <input type="text" [formControl]="addForm.controls.sFirstName" class="form-control" id="inputEmail3"
+                        placeholder="First Name">
+                    <div *ngIf="isValidInput('sFirstName')" class="alert alert-danger mt-1">
+                        <div *ngIf="addForm.controls['sFirstName'].errors.required">
+                            FirstName is required.
+                        </div>
+                        <!-- <div *ngIf="addForm.controls['sFirstName'].dirty && addForm.controls['sFirstName'].errors.min">
+                        Service Charge should be minimum 0.
+                    </div>
+                    <div *ngIf="addForm.controls['sFirstName'].dirty && addForm.controls['sFirstName'].errors.pattern">
+                        Service Charge value should be numeric.
+                    </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="lname" class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="phoneno" class="col-sm-2 col-form-label">Phone No</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="inputEmail3" placeholder="Phone No">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="status" class="col-sm-2 col-form-label">Status</label>
+                <div class="col-sm-10">
+                    <select class="custom-select">
+                        <option selected>Select status type</option>
+                        <option value="1">Pending</option>
+                        <option value="2">Approved</option>
+                        <option value="3">Rejected</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="country" class="col-sm-2 col-form-label">Country</label>
+                <div class="col-sm-10">
+                    <select class="custom-select">
+                        <option selected>Select Country</option>
+                        <option value="1">Pending</option>
+                        <option value="2">Approved</option>
+                        <option value="3">Rejected</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="state" class="col-sm-2 col-form-label">State</label>
+                <div class="col-sm-10">
+                    <select class="custom-select">
+                        <option selected>Select State</option>
+                        <option value="1">Pending</option>
+                        <option value="2">Approved</option>
+                        <option value="3">Rejected</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="city" class="col-sm-2 col-form-label">City</label>
+                <div class="col-sm-10">
+                    <select class="custom-select">
+                        <option selected>Select City</option>
+                        <option value="1">Pending</option>
+                        <option value="2">Approved</option>
+                        <option value="3">Rejected</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="dob" class="col-sm-2 col-form-label">Date Of Birth</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="inputEmail3" placeholder="date">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="passowrd" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="inputEmail3" placeholder="Phone No">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="cpassword" class="col-sm-2 col-form-label">Confirm Password</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="inputEmail3" placeholder="Phone No">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" (click)="submit()">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </app-card>
+</div>
